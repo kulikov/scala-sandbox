@@ -6,29 +6,28 @@ import scala.actors.Actor._
 
 object Main 
 {
-	def main(args : Array[String]) = {
-		
-		val port = 7777
+    def main(args : Array[String]) = {
+        
+        val port = 7777
 
-		try {
+        try {
 
-	      val listener = new ServerSocket(port)
-	      var numClients = 1
-	      
-	      println("Listening on port " + port)
-	      
-	      while (true) {
-	        new ClientHandler(listener.accept(), numClients).start()
-	        numClients += 1
-	      }
-	      
-	      listener.close()
+            val listener = new ServerSocket(port)
+            var numClients = 1
 
-	    } catch {
-	      case e: IOException =>
-	        System.err.println( "Could not listen on port: " + port + "." )
-	        System.exit(-1)
-	    }
+            println("Listening on port " + port)
 
-	}
+            while (true) {
+                new ClientHandler(listener.accept(), numClients).start()
+                numClients += 1
+            }
+
+            listener.close()
+
+        } catch {
+            case e: IOException =>
+                System.err.println( "Could not listen on port: " + port + "." )
+                System.exit(-1)
+        }
+    }
 }
