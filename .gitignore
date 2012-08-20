@@ -1,0 +1,11 @@
+*~
+project/boot/
+project/build/target/
+project/plugins/project/build.properties
+target/
+*.eml
+*.iml
+*.ipr
+*.iws
+.*.sw?
+*.pyc
