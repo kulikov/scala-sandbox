@@ -5,8 +5,8 @@ import java.net.{Socket, SocketException}
 
 class ClientHandler(socket : Socket, clientId : Int) extends Actor
 {
-  
-    def act 
+
+    def act
     {
         try {
 
@@ -17,7 +17,7 @@ class ClientHandler(socket : Socket, clientId : Int) extends Actor
             println(" assigning id " + clientId)
 
             var inputLine = in.readLine()
-            while (inputLine != null && inputLine != "exit") {  
+            while (inputLine != null && inputLine != "exit") {
                 println(clientId + ") " + inputLine)
                 out.println("re: " + inputLine)
                 inputLine = in.readLine()
@@ -28,9 +28,9 @@ class ClientHandler(socket : Socket, clientId : Int) extends Actor
             println("Client " + clientId + " exit")
 
         } catch {
-            case e: SocketException => System.err.println(e)
-            case e: IOException => System.err.println(e.getMessage)
-            case e => System.err.println("Unknown error " + e)
+            case e: SocketException ⇒ System.err.println(e)
+            case e: IOException ⇒ System.err.println(e.getMessage)
+            case e ⇒ System.err.println("Unknown error " + e)
         }
     }
 }

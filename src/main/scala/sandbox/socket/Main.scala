@@ -4,10 +4,10 @@ import java.net.{ServerSocket}
 import scala.actors.Actor
 import scala.actors.Actor._
 
-object Main 
+object Main
 {
     def main(args : Array[String]) = {
-        
+
         val port = 7777
 
         try {
@@ -25,7 +25,7 @@ object Main
             listener.close()
 
         } catch {
-            case e: IOException =>
+            case e: IOException ⇒
                 System.err.println( "Could not listen on port: " + port + "." )
                 System.exit(-1)
         }
