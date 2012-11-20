@@ -4,7 +4,7 @@ name := "sandbox"
 
 version := "0.0.1"
 
-scalaVersion := "2.9.1"
+scalaVersion := "2.9.2"
 
 libraryDependencies ++= Seq(
   "com.rabbitmq" % "amqp-client" % "2.8.7",

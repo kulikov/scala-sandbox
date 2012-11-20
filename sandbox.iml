@@ -25,6 +25,7 @@
     <orderEntry type="module" module-name="util-amqp" />
     <orderEntry type="library" name="typesafe-config" level="project" />
     <orderEntry type="library" name="javax.inject-1" level="application" />
+    <orderEntry type="library" name="scala-compiler" level="application" />
   </component>
 </module>
 
