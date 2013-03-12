@@ -4,7 +4,7 @@
     <facet type="scala" name="Scala">
       <configuration>
         <option name="compilerLibraryLevel" value="Global" />
-        <option name="compilerLibraryName" value="scala-compiler" />
+        <option name="compilerLibraryName" value="scala-compiler-2.9.2" />
         <option name="fsc" value="true" />
       </configuration>
     </facet>
@@ -21,11 +21,10 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="scala-library" level="project" />
     <orderEntry type="module" module-name="util-amqp" />
     <orderEntry type="library" name="typesafe-config" level="project" />
     <orderEntry type="library" name="javax.inject-1" level="application" />
-    <orderEntry type="library" name="scala-compiler-2.9.2" level="project" />
+    <orderEntry type="library" name="scala-compiler-2.9.2" level="application" />
   </component>
 </module>
 
